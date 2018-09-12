@@ -10,6 +10,8 @@ var topics = ["dog", "cat", "squirrel", "tiger", "lion"];
     "https://api.giphy.com/v1/gifs/search?q" +
     topics +
     "&api_key=dc6zaTOxFJmzC&limit=10";
+
+    
   //AJAX request for information
   $.ajax({
     url: queryURL,
@@ -19,6 +21,9 @@ var topics = ["dog", "cat", "squirrel", "tiger", "lion"];
     console.log(queryURL);
 
     console.log(response);
+
+
+  var resultsGoHere = $("<div class='results'>")
 
     var results = response.data;
 
