@@ -2,31 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Giphy Assignment</title>
+    <meta charset="utf-8">
+    <title>Animal Buttons</title>
 </head>
 
 <body>
-    <!--static buttons to start off with, the rest being dynamic-->
-    <div id="buttons">
+    <form>
+        Add an Animal!<br>
+        <input type="text" id="animal-bar"><br>
+    </form>
+    <button id="submit">submit</button>
+    <br>
+    <br>
 
-        <button class="animal" data-animal="dog">bark bark bark</button>
-        <button class="animal"data-animal="cat">scratch</button>
-        <button class="animal"data-animal="squirrel">acorns</button>
-
-        <button class="animal"data-animal="tiger">stripes</button>
-        <button class="animal"data-animal="lion"> mane</button>
+    <button data-animal="cat">i am cat</button>
+    <button data-animal="dog">the goodest of boys</button>
+    <button data-animal="lion">roar</button>
+    <div id="gifs-appear-here">
     </div>
 
-    <div id="thingsAppearHere">
-
-    </div>
-
-    <script src="https://code.jquery.com/jquery.js"></script>
-    
-    <script src="assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src=app.js></script>
 </body>
 
 </html>
