@@ -1,7 +1,15 @@
-    var topics = ["cat","dog","lion"];
-    var newTopics = []
+$(document).ready(function(){
+
+
+var buttonPresets = ["dog","cat","lion","tiger"];
     // Adding click event listen listener to all buttons
     $("button").on("click", function() {
+      for (var i = 0; i < buttonPresets.length; i++) {
+        var button = $("<button>");
+        button.attr({ "data-gif": buttonPresets[i], "class": "gif-button" });
+        button.text(buttonPresets[i]);
+        $(".gif-buttons").append(button);
+      };
         // Grabbing and storing the data-animal property value from the button
         var animal = $(this).attr("data-animal");
   
@@ -17,7 +25,7 @@
           // After data comes back from the request
           .then(function(response) {
             console.log(queryURL);
-  
+            console.log(this);
             console.log(response);
             
             console.log(response.data)
@@ -62,6 +70,7 @@
                 }
             });
           });
+          var submit = 
           queryURL.q = $("#animal-bar").val().trim();
 
          $("#submit").on("click", function(){
@@ -70,3 +79,4 @@
              console.log(newTopics)
          })
     });
+  })
