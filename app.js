@@ -1,15 +1,16 @@
 $(document).ready(function(){
-
-
+function makeButtons();
+  for (var i = 0; i < buttonPresets.length; i++) {
+    var button = $("<button>");
+    button.attr({ "data-gif": buttonPresets[i], "class": "gif-button" });
+    button.text(buttonPresets[i]);
+    $(".gif-buttons").append(button);
+  };
+  makeButtons();
 var buttonPresets = ["dog","cat","lion","tiger"];
     // Adding click event listen listener to all buttons
     $("button").on("click", function() {
-      for (var i = 0; i < buttonPresets.length; i++) {
-        var button = $("<button>");
-        button.attr({ "data-gif": buttonPresets[i], "class": "gif-button" });
-        button.text(buttonPresets[i]);
-        $(".gif-buttons").append(button);
-      };
+      
         // Grabbing and storing the data-animal property value from the button
         var animal = $(this).attr("data-animal");
   
